@@ -27,6 +27,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 		class UInputAction* MoveAction;
 
+	// Looking Input Action
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* LookAction;
+
 protected:
 
 	UPROPERTY(VisibleAnywhere)
@@ -40,6 +44,9 @@ protected:
 
 	// Enhanced Input Movement Input
 	void Move(const FInputActionValue& Value);
+
+	// Enhanced Input Looking Input
+	void Looking(const FInputActionValue& Value);
 
 public:	
 	// Called every frame
